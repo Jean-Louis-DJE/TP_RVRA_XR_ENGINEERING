@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlanetSystemController
@@ -22,6 +23,7 @@ public class PlanetSystemController
 
     void UpdatePlanets(DateTime time)
     {
+        Debug.Log("[TIME] Updating planets " + time);
         foreach (var planet in planets)
         {
             Vector3 pos = ephemeris.GetPlanetPosition(planet.planet, time);
